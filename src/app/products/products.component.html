@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container">
+    <p></p>
+    <table class="table table-hover">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let pd of service.list">
+            <td (click)="onGetProduct(pd.id)">{{pd.name}}</td>
+            <td (click)="onGetProduct(pd.id)">{{pd.price | number : '1.2-2'}}</td>
+        </tr>
+    </table>
+    
+    
+</div>

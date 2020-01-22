@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<p></p>
+    <div class="container d-flex justify-content-center"  *ngIf="userDetails">
+        <ul class="list-group">
+            <li class="list-group-item" >
+                <strong>Username details </strong>
+            </li>
+            <li class="list-group-item">
+                <strong>Username : </strong>{{userDetails.userName}}
+            </li>
+            <li class="list-group-item">
+                <strong>Email : </strong>{{userDetails.email}}
+            </li>
+            <li class="list-group-item">
+                <strong>Sex : </strong>{{userDetails.sex}}
+            </li>
+            <li class="list-group-item">
+                <strong>Birth date : </strong>{{userDetails.birthDate | date: 'dd/MM/yyyy'}}
+            </li>
+        </ul>
+      </div>
+

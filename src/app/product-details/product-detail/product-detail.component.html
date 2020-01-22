@@ -1,0 +1,16 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+    <div class="form-group">
+        <input name="name" #name="ngModel" [(ngModel)]="service.formData.name" class="form-control" placeholder="Name" required
+        minLength="3">
+    </div>
+    <div class="form-group">
+        <input name="price" #price="ngModel" [(ngModel)]="service.formData.price" class="form-control"
+        placeholder="0.00" required name="price" min="0" value="0" step="0.01" title="Currency" pattern="^\d+(?:\.\d{1,2})?$">
+    </div>
+    <div class="form-group">
+        <input name="description" #description="ngModel" [(ngModel)]="service.formData.description" class="form-control" placeholder="Description">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid">Submit</button>
+    </div>
+</form>

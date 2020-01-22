@@ -1,0 +1,18 @@
+<div class="container-lg">
+    <table class="table table-hover">
+        <tr *ngIf="service.product">
+            <td>Name: </td>
+            <td>{{service.product.name}}</td>
+        </tr>
+        <tr *ngIf="service.product">
+            <td>Price : </td>
+            <td>{{service.product.price | number : '1.2-2'}}</td>
+        </tr><tr *ngIf="service.product">
+            <td>Description: </td>
+            <td>
+                <textarea name="description" rows=4 readonly >{{service.product.description}}</textarea>
+            </td>  
+        </tr>
+    </table>
+    <button class="btn btn-outline-dark ml-1" [mat-dialog-close]> Close</button>
+</div>
